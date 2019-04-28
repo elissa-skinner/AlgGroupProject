@@ -7,7 +7,7 @@
 *         and the divide & conquer closest pair and convex hull algorithms.
 * Due Date: 4/5/2019
 * Date Created: 3/18/2019
-* Date Last Modified: 3/24/2019
+* Date Last Modified: 3/28/2019
 */
 
 #include <iostream>
@@ -182,7 +182,7 @@ int main(int argc, char* argv[]){
                     break;
                 }
 
-                case 'D':
+                case 'D': {
 //                    for (int i = 0; i < setOfPoints.size(); i++) {
 //                        cout << setOfPoints[i].getX() << ',' << setOfPoints[i].getY() << endl;
 //                    }
@@ -194,6 +194,12 @@ int main(int argc, char* argv[]){
 //                        cout << temp[i].getX() << ',' << temp[i].getY() << endl;
 //                    }
                     break;
+                }
+
+                case 'H': {
+                    vector<point> temp = bruteForceConvexHull(g, setOfPoints);
+                    drawConvex(g, temp, setOfPoints);
+                }
             }
         }
     }
